@@ -1,0 +1,57 @@
+<html>
+  <head>
+    <title>Canvas tutorial</title>
+    <script type="text/javascript">
+      /*function drawRect(){
+        let canvas = document.getElementById('tutorial');
+        if (canvas.getContext){
+          let ctx = canvas.getContext('2d');
+
+          ctx.beginPath();
+          ctx.moveTo(75,50);
+          ctx.lineTo(100,75);
+          ctx.lineTo(100,25);
+          ctx.lineTo(75,0);
+
+          ctx.closePath();
+
+          ctx.fill();
+        }
+      }*/
+
+      /*function drawCircle(){
+        let canvas = document.getElementById('tutorial');
+        if (canvas.getContext){
+          let ctx = canvas.getContext('2d');
+
+          ctx.beginPath();
+          ctx.arc(75,75,50,0,Math.PI*2,true);
+          ctx.moveTo(110,75);
+          ctx.arc(75,75,35,0,Math.PI,false);
+          ctx.moveTo(65,65);
+          ctx.arc(60,65,5,0,Math.PI*2,true);
+          ctx.moveTo(95,65);
+          ctx.arc(90,65,5,0,Math.PI*2,true);
+
+          ctx.stroke();
+        }
+      }*/
+
+      function drawMoon(){
+        let canvas = document.getElementById('tutorial');
+        if (canvas.getContext){
+          let ctx = canvas.getContext('2d');
+
+          ctx.beginPath();
+
+          ctx.arc(50, 50, 20, 0, Math.PI*3/2, true);
+
+          ctx.stroke();
+        }
+      }
+    </script>
+  </head>
+  <body onload="drawMoon()">
+    <canvas id="tutorial" width="150" height="200"></canvas>
+  </body>
+</html>
