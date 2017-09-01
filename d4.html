@@ -42,11 +42,27 @@
         if (canvas.getContext){
           let ctx = canvas.getContext('2d');
 
-          ctx.beginPath();
+          for(var i=0;i<4;i++){
+            for(var j=0;j<3;j++){
+              ctx.beginPath();
+              let x = 25 + j*50;
+              let y = 25 + i*50;
+              let radius = 20;
+              let startAngle = 0;
+              let endAngle = Math.PI + (Math.PI*j)/2;
+              let anticlockwise = i%2 == 0 ? false : true;
 
-          ctx.arc(50, 50, 20, 0, Math.PI*3/2, true);
+              ctx.arc(x, y, radius, startAngle, endAngle, anticlockwise);
 
-          ctx.stroke();
+              if(i>1){
+                ctx.stroke();
+              }else{
+                ctx.fill();
+              }
+
+            }
+          }
+
         }
       }
     </script>

@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <title>Canvas tutorial</title>
+    <script type="text/javascript">
+      function draw(){
+        let canvas = document.getElementById('tutorial');
+        if (canvas.getContext){
+          let ctx = canvas.getContext('2d');
+          ctx.beginPath();
+
+          ctx.strokeStyle = "rgb(255,0,0)"
+
+          ctx.lineCap = 'square'
+
+          ctx.moveTo(100.5,1);
+          ctx.lineTo(100.5,200);
+
+          ctx.stroke();
+        }
+      }
+    </script>
+
+    <style>
+      canvas{
+        border: 1px solid #000;
+      }
+    </style>
+  </head>
+  <body onload="draw()">
+    <canvas id="tutorial" width="400" height="400"></canvas>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <title>Canvas tutorial</title>
+    <script type="text/javascript">
+      function draw(){
+        let canvas = document.getElementById('tutorial');
+        if (canvas.getContext){
+          let ctx = canvas.getContext('2d');
+
+          ctx.beginPath();
+          ctx.moveTo(75,25);
+          ctx.quadraticCurveTo(25,25,25,75);
+
+          ctx.stroke();
+        }
+      }
+    </script>
+
+    <style>
+      canvas{
+        border: 1px solid #000;
+      }
+    </style>
+  </head>
+  <body onload="draw()">
+    <canvas id="tutorial" width="150" height="200"></canvas>
+  </body>
+</html>
